@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "Free From",
+    "slug": "free-from-app",
+    "owner": "free-from",
+    "description": "Plataforma mobile responsiva que sirva como uma comunidade para pessoas com restrições alimentares. Haverá indicações de estabelecimentos alimentícios, deliverys e um mapa da inclusão com avaliações feitas pelos usuários destes locais.",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/icons/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/icons/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./src/assets/icons/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ]
+  }
+}
