@@ -25,7 +25,7 @@ export function RestaurantFirstStep({ setStep, setRestaurante, restaurante }: Re
 
   async function inputValidation() {
     const cnpjValidation = isCnpjValid(restaurante.cnpj);cnpjValidation !== 'valid' ?setCnpjError(cnpjValidation):setCnpjError('')
-    const fantasyNameValidation = isFantasyNameValid(restaurante.corporativeName);fantasyNameValidation !== 'valid' ?setFantasyNameError(fantasyNameValidation):setFantasyNameError('')
+    const fantasyNameValidation = isFantasyNameValid(restaurante.corporateName);fantasyNameValidation !== 'valid' ?setFantasyNameError(fantasyNameValidation):setFantasyNameError('')
     const emailValidation = isEmailValid(restaurante.email);emailValidation !== 'valid' ?setEmailError(emailValidation):setEmailError('')
     const passwordValidation = isPasswordValid(restaurante.password);passwordValidation !== 'valid' ?setPasswordError(passwordValidation):setPasswordError('')
     const passwordsEqualsValidation = isPasswordsEqualsValid(restaurante.password, passwordConfirmation);passwordsEqualsValidation !== 'valid'?setPasswordConfirmationError(passwordsEqualsValidation):setPasswordConfirmationError('')
@@ -45,7 +45,7 @@ export function RestaurantFirstStep({ setStep, setRestaurante, restaurante }: Re
         <Text style={styles.title}>Cadastro:</Text>
         <View style={styles.inputView}>
         <MaskedInput placeholder='CNPJ'            type='cnpj'    keyboardType='numeric'       value={restaurante.cnpj}  onChangeText={text => setRestaurante({ ...restaurante, cnpj: text })}  error={cnpjError} />
-        <InputField  placeholder="Nome Fantasia"   maxLength={50} keyboardType='ascii-capable' value={restaurante.corporativeName}  onChangeText={text => setRestaurante({ ...restaurante, corporativeName: text })} error={fantasyNameError}/>
+        <InputField  placeholder="Nome Fantasia"   maxLength={50} keyboardType='ascii-capable' value={restaurante.corporateName}  onChangeText={text => setRestaurante({ ...restaurante, corporateName: text })} error={fantasyNameError}/>
         <InputField  placeholder="E-mail"          maxLength={50} keyboardType='email-address' value={restaurante.email} onChangeText={text => setRestaurante({ ...restaurante, email: text })} error={emailError}/>
         <InputField  placeholder="Senha"           maxLength={50} secureTextEntry={true}       value={restaurante.password} onChangeText={text => setRestaurante({ ...restaurante, password: text })} error={passwordError}/>
         <InputField  placeholder="Confirmar senha" maxLength={50} secureTextEntry={true}       value={passwordConfirmation} onChangeText={setPasswordConfirmation} error={passwordConfirmationError}/>

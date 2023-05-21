@@ -13,7 +13,7 @@ import { RestrictionType } from '../../../components/multipleCheckbox/Restrictio
 import { Pessoa, useUser } from '../../../helpers/UserContext';
 
 interface Restriction {
-  name: string;
+  restriction: string;
   category: string;
 }
 
@@ -29,7 +29,7 @@ export function UserThirdStep({pessoa}: UserThirdStepProps) {
     for (const objeto of foodRestrictions) {
       if (objeto.checked === true) {  
         const newRestriction: Restriction={
-          name:objeto.name,
+          restriction:objeto.name,
           category:objeto.type
         }
         pessoa.restrictions.push(newRestriction)
@@ -38,7 +38,7 @@ export function UserThirdStep({pessoa}: UserThirdStepProps) {
     for (const objeto of othersfoodRestrictions) {
       if (objeto.checked === true) {
         const newRestriction: Restriction={
-          name:objeto.name,
+          restriction:objeto.name,
           category:objeto.type
         }
         pessoa.restrictions.push(newRestriction)

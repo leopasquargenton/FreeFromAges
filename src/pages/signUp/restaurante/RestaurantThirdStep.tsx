@@ -15,7 +15,7 @@ interface RestaurantThirdStepProps {
   restaurante: Restaurante;
 }
 interface Restriction {
-  name: string;
+  restriction: string;
   category: string;
 }
 
@@ -33,7 +33,7 @@ export function RestaurantThirdStep({ setStep, setRestaurante, restaurante }: Re
     for (const objeto of allRestrictions) {
       if (objeto.checked === true) {  
         const newRestriction: Restriction={
-          name:objeto.name,
+          restriction:objeto.name,
           category:objeto.type
         }
         restaurante.restrictions.push(newRestriction)

@@ -13,7 +13,7 @@ interface ParamsProps {
   userType: string;
 }
 interface Restriction {
-  name: string;
+  restriction: string;
   category: string;
 }
 export interface Adress{
@@ -57,12 +57,12 @@ export function Login() {
           pessoa.phone="(51) 99162-5473"
           pessoa.profileImage="https://instagram.fpoa4-1.fna.fbcdn.net/v/t51.2885-15/340812701_628451355962200_4232435016622421818_n.webp?stp=dst-jpg_e35&_nc_ht=instagram.fpoa4-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=g3cDFock3FsAX-3JGie&edm=ACWDqb8BAAAA&ccb=7-5&ig_cache_key=MzA4MDA3NDUwMDg4MDcyNzA0Nw%3D%3D.2-ccb7-5&oh=00_AfDklxBtJ9gdDnsX4Mq-VEsNzt42dIOxavmRsPo5iqW7KQ&oe=646C4894&_nc_sid=640168"
           const newRestriction: Restriction={
-            name:"Milho",
+            restriction:"Milho",
             category:"Intolerância"
           }
           pessoa.restrictions.push(newRestriction)
           const newRestriction2: Restriction={
-            name:"Azeitona",
+            restriction:"Azeitona",
             category:"Intolerância"
           }
           pessoa.restrictions.push(newRestriction2)
@@ -72,9 +72,9 @@ export function Login() {
       }
     }
 if(userType=='Restaurante'){
-      if(restaurante.corporativeName==""){
+      if(restaurante.corporateName==""){
         restaurante.cnpj="12.345.678/0009-10"
-        restaurante.corporativeName="Restaurante dos FreeFrom"
+        restaurante.corporateName="Restaurante dos FreeFrom"
         restaurante.email="freefrom.ages@gmail.com"
         restaurante.password="1234"
         restaurante.responsibleName="Maria da Silva"

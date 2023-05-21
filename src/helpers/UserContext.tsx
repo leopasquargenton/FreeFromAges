@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState} from "react";
 import { api } from "./api";
 
 interface Restriction {
-  name: string;
+  restriction: string;
   category: string;
 }
 
@@ -32,7 +32,7 @@ export interface Pessoa{
 
 export interface Restaurante{ 
   cnpj:string;
-  corporativeName:string
+  corporateName:string
   email:string;
   password:string;
   responsibleName:string;
@@ -76,7 +76,7 @@ export function UserProvider({children}:Props){
 
   const [restaurante,setRestaurante] = useState<Restaurante>({
     cnpj:"",
-    corporativeName: "",
+    corporateName: "",
     email:"",
     password:"",
     responsibleName:"",
